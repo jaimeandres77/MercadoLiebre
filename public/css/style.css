@@ -1,0 +1,266 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* NORMALIZACIÓN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* VARIABLES */
+
+:root {
+    /* colores */
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    --negro: #000000;
+    --blanco: #ffffff;
+    /* tamaños de fuentes */
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* familias de fuentes */
+    --roboto: "Roboto", sans-serif;
+  }
+
+  /* ESTILOS COMUNES */
+
+html {
+    font-size: 62.5%;
+    font-family: var(--roboto);
+    background-color: var(--gris-claro);
+  }
+
+  
+h2 {
+    font-size: var(--title-md);
+  }
+  
+p {
+    font-size: var(--text-sm);
+  }
+
+/* CABECERA */
+
+header {
+    background-color: var(--amarillo);
+  }
+  
+  div.top-header {
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  header picture.logo {
+    display: block;
+    width: 50%;
+  }
+  header nav {
+    font-size: var(--text-sm);
+    display: none;
+    padding: 10px;
+  }
+
+  header nav ul{
+      width: 40%;
+      display: flex;
+      justify-content: space-around;
+      margin: 0px 0px 5px 0px;
+  }
+  
+  header ul li {
+    list-style-type: none;
+  }
+  
+  header ul li a {
+    text-decoration: none;
+    color: var(--negro);
+  }
+  .form{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  header .form .input {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    color: var(--gris-oscuro);
+    padding: 2px 20px 2px 2px;
+  }
+  
+  header .form .submit {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    width: 18px;
+    padding: 2px;
+  }
+  
+  header div.top-header p {
+    margin-top: 15px;
+  }
+  
+  div.burger-menu {
+    text-align: center;
+    display: block;
+  }
+  
+  div.burger-menu i {
+    background-color: #0044aa;
+    font-size: 20px;
+    color: var(--blanco);
+    height: 30px;
+    width: 30px;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  section.banner img{
+    width:100%;
+  }
+
+  main{
+    width:90%;
+    margin: 0px auto;
+  }
+
+  main section article img{
+    width: 100%;  
+  }
+
+  main section article{
+      margin-bottom: 10px;
+      background-color: white;
+  }
+
+  .info-product-contanier{
+      position: relative;
+      padding: 15px;
+      border-top: 1px solid var(--gris-claro);
+  }
+
+  .info-subcontainer{
+    display: flex;
+    align-items: baseline;
+    gap: 2%;
+  }
+
+  .description{
+      margin-top: 15px;
+      color: var(--gris-oscuro);
+      display: none;
+  }
+  .price{
+      font-size: var(--text-md);
+      margin: 2px 0px
+  }
+
+  main section h2{
+      font-size: var(--title-md);
+      color: var(--gris-oscuro);
+      padding: 10px 0px;
+      font-weight: 450;
+  }
+
+  main section article i, .discount{
+      color: var(--verde);
+  }
+
+  main section article i{
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      position: absolute;
+      right: 20px;
+      top: -15px;
+      font-size: var(--text-md);
+      border: 1px solid var(--verde);
+      border-radius: 50%;
+      padding: 5px;
+  }
+
+  footer{
+      background-color: white;
+      padding: 1%;
+      width: 95%;
+      margin: 0px auto 2.5% 
+  }
+  
+  footer article p {
+    padding: 2px;
+    text-align: center;
+  }
+  
+  footer article h3{
+      text-align: center;
+      font-size: var(--text-sm);
+  }
+
+  .footerIcons{
+      text-align:center;
+      color: #1259c3;
+      font-size: 2.2em;
+      margin-bottom: 10px;  
+  }
+
+  footer article{
+      width: 70%;
+      margin: 40px 0 40px 0px;
+      transform: translateX(20%);
+  }
+#copyright{
+    font-size: var(--text-sm);
+    margin: 0px 0px 10px 10px;
+}
+
+
+
+/*------------------------------------------------------------ RESPONSIVE-----------------------------------------------*/
+
+@media screen and (min-width:361px){
+    .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.6);
+    }
+
+    header nav{
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+    }
+
+    div.burger-menu{
+        display: none;
+    }
+
+    .article-container{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .article-container article{
+      max-width: 48%;
+    }
+}
+
+@media screen and (min-width:769px){
+
+  .article-container article{
+    max-width: 24%;
+  }
+}
