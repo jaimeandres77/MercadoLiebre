@@ -15,6 +15,8 @@
     --amarillo: #eac926;
     --azul: #03264c;
     --celeste: #1259c3;
+    --celesteOscuro:#0e4aa3;
+    --blancoAzulado:#d5d8df;
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
     --verde: #39b54a;
@@ -53,7 +55,7 @@ header {
   }
   
   div.top-header {
-    padding: 5%;
+    padding: 4%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -260,6 +262,44 @@ header {
   gap: 2%;
 }
 
+.avatarPhoto{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-buttons button{
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+.form-submit{
+  background-color: var(--celeste);
+  color: white;
+}
+.form-submit:hover{
+  background-color: var(--celesteOscuro) ;
+  transition: 0.2s;
+}
+
+.form-reset{
+  background-color:var(--blanco) ;
+  color: var(--celeste);
+}
+.form-reset:hover{
+  background-color: var(--blancoAzulado) ;
+  transition: 0.2s;
+}
 
 
 /*------------------------------------------------------------ RESPONSIVE-----------------------------------------------*/
@@ -312,5 +352,10 @@ header {
 
   .top-header .p-container{
     width: 33%;
+  }
+
+  .register-form{
+    width: 50%;
+    transform: translateX(50%);
   }
 }

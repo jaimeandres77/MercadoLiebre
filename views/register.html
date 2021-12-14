@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <!--ICONOS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Registro</title>
 </head>
 <body>
     <header>
@@ -16,9 +16,9 @@
                 <img src="/img/logo-mercado-liebre.svg" alt="LogoMercadoLiebre">
             </picture>
             <div class="form-container">
-                <form class="main-form" action="/home.html">
+                <form class="main-form" action="/home.html" method="get">
                     <input class="main-input" type="text" placeholder="Buscar productos, marcas y más">
-                    <div class="submit"><i class="fas fa-search"></i></div>
+                    <button class="submit" type="submit"><i class="fas fa-search"></i></button>                    
                 </form>
             </div>
             <div class="p-container">
@@ -45,17 +45,17 @@
             <i class="fas fa-bars"></i>
         </div>
     </header>
-    <form class="register-form" action="/register.html" method="post">
+    <form class="register-form" action="/register.html" method="post" enctype="multipart/form-data" >
         <div class="form-section">
             <h1>Registro</h1>
-            <input type="text" placeholder="Nombre y Apellido">
-            <input type="text" placeholder="Nombre Usuari@">
-            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Nombre y Apellido" required>
+            <input type="text" placeholder="Nombre Usuari@" min="7" max="10" required>
+            <input type="email" placeholder="E-mail" required>
         </div>
         <div class="form-section">
             <h3>Fecha de nacimiento</h3>
-            <input type="date"><br>
-            <input type="text" placeholder="Domicilio">
+            <input type="date" required><br>
+            <input type="text" placeholder="Domicilio" required>
         </div>
         <h3>Perfil de Usuario</h3>
         <div class="interactions-container">
@@ -63,6 +63,11 @@
             <label for="medio1">Comprador</label>
             <input type="radio" id="medio2" name="medio" value="Vendedor">
             <label for="medio2">Vendedor</label>
+            
+        </div>
+        <div class="avatarPhoto">
+            <label for="avatar">Seleccione una imagen para el perfil:</label>
+            <input type="file" id="avatar" name="avatar" accept=".jpg,.png">
         </div>    
         <h3>Intereses</h3>
         <div class="interactions-container">
@@ -76,7 +81,11 @@
             <label for="Jugueteria"> Juguetería</label>
             <input type="checkbox" id="vidaSana" name="vidaSana" value="vidaSana">
             <label for="vidaSana"> Vida Sana</label>
-        </div>  
+        </div>
+        <div class="form-buttons">
+            <button class="form-submit" type="submit" >Registrarse</button>
+            <button class="form-reset" type="reset">Borrar</button>
+        </div>
     </form>
 
     <footer>
