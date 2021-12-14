@@ -100,15 +100,19 @@ header {
   .main-input {
     width: 100%;
     background-color: var(--blanco);
-    border: 1px solid var(--negro);
+    padding: 8px;
+    border: none;
+    border-radius: 2px 0px 0px 2px;
     color: var(--gris-oscuro);
+    box-shadow: 2px 2px 3px 0.1px rgb(139, 139, 139);
   }
   
   .submit {
     background-color: var(--blanco);
-    border: 1px solid var(--negro);
-    width: 20px;
-    padding: 3px;
+    border: 0.1px solid rgba(100, 100, 100, 0.24);
+    width: 30px;
+    padding: 6px;
+    box-shadow: 2px 2px 3px 0.1px rgb(139, 139, 139);
   }
   
   .p-container {

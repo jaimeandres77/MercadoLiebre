@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="/css/style.css">
     <!--ICONOS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Registro</title>
+    <title>Ingresa</title>
 </head>
 <body>
+
     <header>
         <div class="top-header">
             <picture class="logo">
                 <img src="/img/logo-mercado-liebre.svg" alt="LogoMercadoLiebre">
             </picture>
             <div class="form-container">
-                <form class="main-form" action="/home.html" method="get">
+                <form class="main-form" action="/home.html">
                     <input class="main-input" type="text" placeholder="Buscar productos, marcas y más">
-                    <button class="submit" type="submit"><i class="fas fa-search"></i></button>                    
+                    <div class="submit"><i class="fas fa-search"></i></div>
                 </form>
             </div>
             <div class="p-container">
@@ -45,53 +46,20 @@
             <i class="fas fa-bars"></i>
         </div>
     </header>
-    <form class="register-form" action="/register" method="post" enctype="multipart/form-data" >
-        <div class="form-section">
-            <h1>Registro</h1>
-            <input type="text" placeholder="Nombre y Apellido" required>
-            <input type="text" placeholder="Nombre Usuari@" min="7" max="10" required>
-            <input type="email" placeholder="E-mail" required>
-        </div>
-        <div class="form-section">
-            <h3>Fecha de nacimiento</h3>
-            <input type="date" required><br>
-            <input type="text" placeholder="Domicilio" required>
-        </div>
-        <h3>Perfil de Usuario</h3>
-        <div class="interactions-container">
-            <input type="radio" id="medio1" name="medio" value="Comprador">
-            <label for="medio1">Comprador</label>
-            <input type="radio" id="medio2" name="medio" value="Vendedor">
-            <label for="medio2">Vendedor</label>
-            
-        </div>
-        <div class="avatarPhoto">
-            <label for="avatar">Seleccione una imagen para el perfil:</label>
-            <input type="file" id="avatar" name="avatar" accept=".jpg,.png">
-        </div>    
-        <h3>Intereses</h3>
-        <div class="interactions-container">
-            <input type="checkbox" id="Electro" name="Electro" value="Electro">
-            <label for="Electro"> Electro</label>
-            <input type="checkbox" id="Moda" name="Moda" value="Moda">
-            <label for="Moda"> Moda</label>
-            <input type="checkbox" id="Hogar" name="Hogar" value="Hogar">
-            <label for="Hogar"> Hogar</label>
-            <input type="checkbox" id="Jugueteria" name="Jugueteria" value="Jugueteria">
-            <label for="Jugueteria"> Juguetería</label>
-            <input type="checkbox" id="vidaSana" name="vidaSana" value="vidaSana">
-            <label for="vidaSana"> Vida Sana</label>
-        </div>
-        <h3>Contraseña</h3>
-        <div class="form-section">
-            <input type="password" name="password" placeholder="Contraseña">
-            <input type="password" name="Confirmpassword" placeholder="ConfirmarContraseña">
-        </div>   
-        <div class="form-buttons">
-            <button class="form-submit" type="submit" >Registrarse</button>
-            <button class="form-reset" type="reset">Borrar</button>
-        </div>
-    </form>
+    <!--FIN HEADER-->
+
+    <main>
+        <form class="register-form" action="/" method="post" enctype="multipart/form-data">
+            <h2>Ingresa</h2>
+            <div class="form-section">
+                <input type="text" placeholder="Nombre Usuari@" min="7" max="10" required>
+                <input type="password" name="password" placeholder="Contraseña">                
+            </div>    
+            <div class="form-buttons">
+                <button class="form-submit" type="submit" >Enviar</button>
+            </div>    
+        </form>
+    </main>
 
     <footer>
         <article>
@@ -123,5 +91,6 @@
 
         <p id="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
+    
 </body>
 </html>
